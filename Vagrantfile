@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
       echo "10.0.0.11  worker-node01" >> /etc/hosts
       echo "10.0.0.12  worker-node02" >> /etc/hosts
   SHELL
-  
+
   config.vm.define "master" do |master|
     master.vm.box = "bento/ubuntu-22.04"
     master.vm.hostname = "master-node"
@@ -27,6 +27,6 @@ Vagrant.configure("2") do |config|
         vb.cpus = 1
     end
   end
-  
+
   end
 end
